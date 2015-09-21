@@ -1,0 +1,69 @@
+<?php
+if ($_SESSION['status']=='admin'){
+?>
+  <div class="judul_awal"><h2>Hay <?php echo $_SESSION ['username']; ?>,... Selamat Datang</h2></div>
+  <!--<p>Sekarang Anda berada pada <b>Sistem Informasi Perpustakaan</b><br />
+     Anda login sebagai : <b><?php echo $_SESSION['status'];?><?php echo $_SESSION['id_user'] ; ?></b>, pada hari <b><?php echo $hari_ini.", ". tgl_indo(date("Y m d")). " | " . date("H:i:s") ." WIB "; ?></b><br />
+     Pada aplikasi penjualan ini terdapat 5 menu utama dan 10 sub menu, yaitu :
+     <ol class="beranda">
+       <li>Beranda : sebuah menu utama yang digunakan untuk menampilkan halaman utama</li>
+       <li>Data Master : sebuah menu utama yang digunakan untuk menampung 6 buah sub menu, yaitu : 
+         <ol type="a">
+           <li>Data Kategori : sebuah sub menu yang digunakan untuk menampilkan halaman data kategori barang</li>
+           <li>Data Merk : sebuah sub menu yang digunakan untuk menampilkan halaman data merk barang</li>
+           <li>Data Satuan : sebuah sub menu yang digunakan untuk menampilkan halaman data satuan barang</li>
+           <li>Data Barang : sebuah sub menu yang digunakan untuk menampilkan halaman data barang</li>
+           <li>Data Toko : sebuah sub menu yang digunakan untuk menampilkan halaman data toko atau profil sebuah perusahaan</li>
+         </ol>
+       </li>
+       <li>Transaksi : sebuah menu utama yang digunakan untuk menampung 1 buah sub menu, yaitu :
+         <ol type="a">
+           <li>Penjualan : sebuah sub menu yang digunakan untuk menampilkan halaman transaksi penjualan barang</li>
+         </ol>
+       </li>
+       <li>Laporan : sebuah menu utama digunakan untuk menampung 2 buah sub menu, yaitu :
+         <ol type="a">
+           <li>Laporan Barang : sebuah sub menu yang digunakan untuk menampilkan halaman laporan data barang</li>
+           <li>Laporan Penjualan : sebuah sub menu yang digunakan untuk menampilkan halaman laporan data penjualan barang</li>
+         </ol>
+       </li>
+       <li>Utility : sebuah menu utama yang digunakan untuk menampung 1 buah sub menu, yaitu :
+         <ol type="a">
+           <li>Cetak Barcode : sebuah sub menu yang digunakan untuk menampilkan halaman cetak barcode atau membuat barcode</li>
+           <li>Ubah Password : sebuah sub menu yang digunakan untuk menampilkan halaman ubah password yang diperuntukan bagi user yang akan mengganti password</li>
+         </ol>
+       </li>
+       <li>Logout : sebuah menu utama yang digunakan untuk keluar dari aplikasi program</li>
+     </ol> 
+     Perlu diperhatikan!! Apabila Anda ingin keluar pada aplikasi ini, Anda harus <a href="mod/logout.php"><b>Logout</b></a> untuk menjaga keamanan sistem.
+  </p>
+  -->
+  <table border="1" align="center" width="200px" cellpadding="0" cellspacing="0">
+	<tr>
+		<td width="170" bgcolor="#FFFFFF" valign="top">
+			
+			<div id="menu">
+				<ul>
+					<li><h2>&nbsp;&nbsp;&nbsp;Pencarian <br>&nbsp;&nbsp;&nbsp;Berdasarkan</h2></li>
+					<li> <a href=?module=judulbuku>&#187; Judul Buku </a> </li>
+					<li> <a href=?module=kategoribuku>&#187; Kategori Buku </a> </li>
+					<li> <a href=?module=pengarangbuku>&#187; Pengarang Buku </a> </li>
+					<li> <a href=?module=penerbitbuku>&#187; Penerbit Buku </a> </li>
+				</ul>
+			</div>
+
+			<p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p>
+		</td>
+		<td width="20" bgcolor="#FFFFFF"></td>
+		<td width="140px" bgcolor="#FFFFFF" valign="top">
+			<p>&nbsp;</p>
+			<font face=tahoma size=2><?php include "content.php"; ?></font>
+			<p>&nbsp;</p>
+		</td>
+		<td width="30" bgcolor="#FFFFFF">&nbsp;</td>
+	</tr>
+	
+</table>
+<?php
+}
+?>
