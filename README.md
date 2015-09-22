@@ -1,2 +1,3 @@
 # siPer
-Sistem Informasi Perpustakaan
+Sistem Informasi Perpustakaan [siPer]
+sebuah sistem informasi yang mengelola data seputar perpustakaan 
