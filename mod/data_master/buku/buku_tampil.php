@@ -1,8 +1,7 @@
 <?php
 session_start();
-if (empty($_SESSION['username']) AND empty($_SESSION['password'])){
-?>
    <script>alert('Untuk mengakses halaman admin, Anda harus login terlebih dahulu.'); window.location = './index.php'</script>
+if (empty($_SESSION['username']) AND empty($_SESSION['password'])){
 <?php
 }
 else{
