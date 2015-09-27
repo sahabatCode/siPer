@@ -9,6 +9,7 @@ if ($_SESSION['status']=='admin'){
         <li><a href="?mod=kat">Data Kategori</a></li>
 	    <li><a href="?mod=buk">Buku</a></li>
 	    <li><a href="?mod=mem">Member</a></li>
+	    <li><a href="?mod=brg">Barang</a></li> 
 	  </ul>
 	</li>
 	
