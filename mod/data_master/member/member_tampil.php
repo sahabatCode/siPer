@@ -7,7 +7,7 @@ if (empty($_SESSION['username']) AND empty($_SESSION['password'])){
 }
 else{
   if ($_SESSION[status]=='admin'){
-    $aksi="mod/data_master/member/kategori_aksi.php";
+    $aksi="mod/data_master/member/member_aksi.php";
   ?>
     <div class="judul"><h2>Data Member</h2></div>
     <div class="tambah"><input type="button" class="button" value="Tambah Data" onclick="mem_tb()"></div>
@@ -38,8 +38,8 @@ else{
             <td width="200"><?php echo $y['alamat']; ?></td>
             <td width="200"><?php echo $y['hp']; ?></td>
             <td width="80px" align="center">
-			  <a href="?mod=kat_ub&id=<?php echo $y['id_kat']; ?>"><img src="images/edit.png" title="edit"></a>
-              <a href="<?php echo "$aksi?mod=kat&aksi=hap_dt&id=$y[id_kat]"; ?>" onclick="return confirm('Anda yakin ingin menghapus data <?php echo $y['nama_kat']; ?>')"><img src="images/delete.png" title="Hapus"></a>
+            <a href="?mod=mem_ub&id=<?php echo $y['id_']; ?>"><img src="images/edit.png" title="edit"></a>
+            <a href="<?php echo "$aksi?mod=mem&aksi=hap_dt&id=$y[id_member]"; ?>" onclick="return confirm('Anda yakin ingin menghapus data <?php echo $y['id_member']; ?>')"><img src="images/delete.png" title="Hapus"></a>
             </td>
           </tr>
       <?php
@@ -54,7 +54,7 @@ else{
       ?>
       </table>
       </div><!-- end class data -->
-      <div class="jml_data">Jumlah Data : <?php echo $cek_kat; ?></div>
+      <div class="jml_data">Jumlah Data : <?php echo $cek_mem; ?></div>
     </div><!-- end class area_main -->
     <?php
   }
