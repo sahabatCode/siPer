@@ -14,7 +14,7 @@ else{
 
     //hapus data
     if ($mod=='mem' AND $aksi=='hap_dt'){
-      mysql_query("DELETE FROM barang WHERE id_brg='$_GET[id]'");
+      mysql_query("DELETE FROM member WHERE id_member='$_GET[id]'");
       header('location:../../../mediaweb.php?mod='.$mod);
     }
     //tambah data
@@ -26,8 +26,8 @@ else{
 									  alamat,
 									  email,
 									  telphon,
-									  hp) 
-				              VALUES ('$_POST[id_member]',
+									  hp)
+				              VALUES ('$_POST[id_member_h]',
 									  '$_POST[nama]',
 									  '$_POST[tmp_lahir]',
 									  '$_POST[tgl_lahir]',
@@ -39,7 +39,7 @@ else{
     }
     //ubah data
     elseif($mod=='mem' AND $aksi=='ubh_dt'){
-      mysql_query("UPDATE barang SET nama_brg   = '$_POST[nama_brg]',
+      mysql_query("UPDATE member SET nama_brg   = '$_POST[nama_brg]',
 									 id_merk    = '$_POST[merk]',
 									 id_kat     = '$_POST[kategori]',
 									 id_sat     = '$_POST[satuan]',
