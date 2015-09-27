@@ -7,6 +7,8 @@ if (empty($_SESSION['username']) AND empty($_SESSION['password'])){
 }
 else{
   if ($_SESSION['status']=='admin'){
+    $last = mysql_fetch_array(mysql_query("SELECT no_member FROM member ORDER BY id_member DESC LIMIT 1"));
+    $lastKd = $last[no_member] + 1;
     $aksi="mod/data_master/member/member_aksi.php";
   ?>
     <div class="judul"><h2>Tambah Member</h2></div>
@@ -17,7 +19,10 @@ else{
 		  <tr>
             <td>Id Member</td>
             <td>:</td>
-            <td><input type="text" name="id_member" value="" size="10" /></td>
+            <td>
+            <input type="text" name="id_member" id="id_member" maxlength="6" value="$lastKd"); ?>" size="10" disabled="disabled" />
+            <input type="hidden" name="id_member_h" id="id_member_h" value="$lasKd"); ?>" size="10" />
+          </td>
           </tr>
 		  <tr>
             <td>Nama</td>
