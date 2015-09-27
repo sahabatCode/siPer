@@ -7,32 +7,26 @@ function kat_tb(){
 function kat_bat(){
    setTimeout(self.location.href="?mod=kat", 1000);
 }
-function merk_tb(){
-   window.location.href="?mod=merk_tb";
-}
-function merk_bat(){
-   setTimeout(self.location.href="?mod=merk", 1000);
-}
-function sat_tb(){
-   window.location.href="?mod=sat_tb";
-}
-function sat_bat(){
-   setTimeout(self.location.href="?mod=sat", 1000);
-}
 function brg_tb(){
    window.location.href="?mod=brg_tb";
 }
 function brg_bat(){
    setTimeout(self.location.href="?mod=brg", 1000);
 }
-function ctk_bar(){
-   setTimeout(self.location.href="?mod=ctk_bar", 1000);
-}
 function buk_tb(){
    window.location.href="?mod=buk_tb";
 }
 function buk_bat(){
-	setTimeout(self.location.href="?mod=buk", 1000);		
+  setTimeout(self.location.href="?mod=buk", 1000);    
+}
+function mem_tb(){
+  window.location.href="?mod=mem_tb";
+}
+function mem_bat(){
+  setTimeout(self.location.href="?mod=mem",1000);
+}
+function ctk_bar(){
+   setTimeout(self.location.href="?mod=ctk_bar", 1000);
 }
 //--------------- fungsi aksi transaksi ---------------
 function id_bar() {
