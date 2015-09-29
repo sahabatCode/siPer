@@ -20,34 +20,33 @@ else{
     //tambah data
     elseif($mod=='mem' AND $aksi=='tb_dt'){
       mysql_query("INSERT INTO member(id_member,
-									  nama,
-									  tmp_lahir,
-									  tgl_lahir,
-									  alamat,
-									  email,
-									  telphon,
-									  hp)
-				              VALUES ('$_POST[id_member_h]',
-									  '$_POST[nama]',
-									  '$_POST[tmp_lahir]',
-									  '$_POST[tgl_lahir]',
-									  '$_POST[alamat]',
-									  '$_POST[email]',
-									  '$_POST[telphon]',
-									  '$_POST[hp]')");
+                                      nama,
+                                      tmp_lahir,
+                                      tgl_lahir,
+                                      alamat,
+                                      email,
+                                      telphon,
+                                      hp)
+				                      VALUES ('$_POST[id_mem]',
+									                    '$_POST[nama]',
+									                    '$_POST[tmp_lahir]',
+									                    '$_POST[tgl_lahir]',
+									                    '$_POST[alamat]',
+									                    '$_POST[email]',
+									                    '$_POST[telphon]',
+									                    '$_POST[hp]')");
       header('location:../../../mediaweb.php?mod='.$mod);
     }
     //ubah data
     elseif($mod=='mem' AND $aksi=='ubh_dt'){
-      mysql_query("UPDATE member SET nama_brg   = '$_POST[nama_brg]',
-									 id_merk    = '$_POST[merk]',
-									 id_kat     = '$_POST[kategori]',
-									 id_sat     = '$_POST[satuan]',
-									 harga_beli = '$_POST[harga_beli]',
-									 harga_jual = '$_POST[harga_jual]',
-									 barcode    = '$_POST[barcode]',
-									 stock      = '$_POST[stock]'
-							   WHERE id_brg     = '$_POST[id_brg_h]'");
+      mysql_query("UPDATE member SET nama 		  ='$_POST[nama]',
+      								               tmp_lahir	='$_POST[tmp_lahir]',
+      								               tgl_lahir	='$_POST[tgl_lahir]',
+      								               alamat		  ='$_POST[alamat]',
+      								               email 		  ='$_POST[email]',
+      								               telphon 	  ='$_POST[telphon]',
+      								               hp 		    ='$_POST[hp]'
+							                 WHERE id_member  ='$_POST[id_mem]'");
       header('location:../../../mediaweb.php?mod='.$mod);
     }
   }
